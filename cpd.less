@@ -1,0 +1,380 @@
+/*******************************************************/
+/* CPD */
+/*******************************************************/
+
+/*------------------------------------*\
+  VARIABLES
+\*------------------------------------*/
+@grey: #888;
+@blue: #103557;
+
+body{
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: @grey;
+	text-rendering: optimizeLegibility;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+a{
+	text-decoration: none;
+	color:@blue;
+	&:hover {
+		text-decoration: underline;
+	}
+	&:active {
+		color: @blue;
+	}
+}
+
+/*******************************************************/
+/* Header & Navigation */
+/*******************************************************/
+
+.header {
+	display: block;
+	margin: 0 auto;
+	padding: 55px 70px 70px 70px;
+	background: @blue;
+}
+h1{
+	font-size: 48px;
+	line-height: 48px;
+	color: white;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+	float: left;
+	text-decoration: none;
+	a { color: white; }
+	a:hover {
+		text-decoration: none;
+	}
+}
+h2 {
+	line-height: 28px;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+h3 {
+	line-height: 1.35em;
+	font-size: 48px;
+	font-weight: bold;
+	margin-top: 70px;
+	color: @blue;
+	text-transform: capitalize;
+}
+#nav {
+	float: right;
+ 	clear: right;
+ 	padding-top: 11px;
+ 	font-weight: bold;
+ 	li {
+	 	float: left;
+		margin-left: 10px;
+		padding-left: 10px;
+		margin-bottom: 0;
+		&:first-child{
+			border-left: none;
+		}
+		#apply {
+			background: white;
+			color: @blue;
+			padding: 8px 20px 11px;
+			-webkit-border-radius: 100px;
+			-moz-border-radius: 100px;
+			border-radius: 100px;
+			&:active {
+				background: @blue;
+				color: white;
+			}
+		}
+ 	}
+ 	a {
+		color: white;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+		&:active {
+			color: white;
+		}
+	}
+}
+
+/*******************************************************/
+/* Designers */
+/*******************************************************/
+
+#content {
+	margin: 0 auto;
+	padding: 0 70px;
+	ul {
+		margin-top: 70px;
+		&.resources{ margin-top: 45px; }
+	}
+	li {
+		margin-bottom: 30px;
+		width: 360px;
+		margin-right: 60px;
+		border-bottom: 1px solid #DDD;
+		padding-bottom: 30px;
+		display: inline-block;
+		&.resource { width: 540px; }
+		a {
+			color: @grey;
+		}
+		h2 a {
+			color: @blue;
+		}
+		img {
+			float: left;
+		}
+		div {
+			float: left;
+			margin-left: 15px;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	p{
+		max-width: 480px;
+		margin: 30px 0;
+		&.nomarg{
+			margin: 0;
+		}
+		&.about{
+			margin: 70px 0;
+		}
+		a{
+			text-decoration: underline;
+		}
+	}
+	h2.form-title {
+		margin: 70px 0 20px 0;
+		color: @blue;
+	}
+}
+
+/*******************************************************/
+/* Opportunities */
+/*******************************************************/
+
+#content ul.jobs {
+	float: left;
+	margin-top: 0px;
+}
+#content li.opps {
+	display: block;
+	width: 480px;
+	&:last-child {
+		margin-bottom: 100px;
+	}
+}
+.post_position{
+	float: right;
+	width: 300px;
+	background: #f5f5f5;
+	padding: 30px 32px;
+	text-align: center;
+	h4 {
+		color: #222;
+		font-weight: bold;
+		margin-bottom: 6px;
+	}
+}
+.btn_post{
+	background-color: @blue;
+	color: white;
+	padding: 8px 25px 11px;
+	font-weight: bold;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	display: inline-block;
+	margin-top: 15px;
+	text-align: center;
+	.free {
+		font-weight: normal;
+	}
+	&:active{
+		background: @blue;
+		color: white;
+	}
+}
+
+/*******************************************************/
+/* Footer */
+/*******************************************************/
+
+#footer{
+	margin-top: 150px;
+	height: 400px;
+	background-color: @blue;
+	}
+
+/*******************************************************/
+/* Forms */
+/*******************************************************/
+form {
+	padding-bottom: 100px;
+	color: @blue;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  span{
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+input{
+  display: block;
+  margin-bottom: 20px;
+	min-width: 320px;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 8px 6px;
+	color: #777;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	border: 1px @blue solid;
+	-webkit-appearance: none;
+  &.radio{
+		display: inline;
+		margin-bottom: 6px;
+		margin-right: 10px;
+	}
+	&.submit{
+		margin-top: 40px;
+		background: @blue;
+		color: white;
+		font-weight: bold;
+		border: none;
+		-webkit-border-radius: 100px;
+		-moz-border-radius: 100px;
+		border-radius: 100px;
+		padding: 16px 0px;
+		font-size: 18px;
+	}
+}
+
+/*******************************************************/
+/* Tablet */
+/*******************************************************/
+@media handheld, only screen and (max-width: 1050px) {
+	#nav {
+		li{
+			margin-left: 0;
+			padding-left: 15px;
+		}
+	}
+	#content{
+		ul{
+			&.jobs{
+				float: none;
+			}
+		}
+		li{
+			&:nth-child(even){
+				margin-right: 0;
+			}
+			&.opps{
+			}
+		}
+	}
+	.post_position {
+		float: none;
+		margin: 50px 0;
+	}
+}
+
+/*******************************************************/
+/* Mobile */
+/*******************************************************/
+@media handheld, only screen and (max-width: 767px) {
+	body {
+		min-width: 320px;
+		font-size: 14px;
+	}
+	.header {
+		padding: 20px;
+		h1{ margin-right: 40px; }
+	}
+	#nav{
+		float: left;
+		li{
+			padding-left: 0;
+			padding-right: 15px;
+			line-height: 40px;
+			font-size: 16px;
+		}
+	}
+	#content{
+		max-width: 480px;
+		margin: 0;
+		padding: 0 20px;
+		h2{
+			font-size: 20px;
+			line-height: 1.2em;
+			&.form-title {
+				margin-top: 30px;
+			}
+		}
+		h3 {
+			font-size: 16px;
+			text-transform: uppercase;
+			margin-top: 40px;
+		}
+		ul {
+			margin-top: 30px;
+			&.resources { margin-top: 20px;
+				li {
+					width: 280px;
+					img { display: none; }
+					div {
+						margin-left: 0;
+					}
+				}
+			}
+			&.jobs{
+				img {
+					display: none;
+				}
+				div {
+					margin-left: 0;
+				}
+			}
+		}
+		li{
+			margin-right: 0;
+			width: 100%;
+			&.opps{
+				width: 280px;
+			}
+		}
+		p.about {
+			margin: 0 0 30px 0;
+		}
+	}
+	#footer{
+		margin-top: 60px;
+		height: 240px;
+	}
+	input {
+		width: 268px;
+		min-width: 240px;
+	}
+	.post_position {
+		width: 240px;
+		padding: 30px 20px;
+		margin: 20px 0 40px 0;
+	}
+}
